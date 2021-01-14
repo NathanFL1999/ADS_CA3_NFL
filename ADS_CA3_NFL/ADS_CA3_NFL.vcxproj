@@ -139,15 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\FileInputNode.cpp" />
     <ClCompile Include="ADS_CA3_NFL.cpp" />
+    <ClCompile Include="FileInputNode.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\FileInputNode.h" />
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\SalesRecords.h" />
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\TimeUtility.h" />
+    <ClInclude Include="FileInputNode.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="SalesRecords.h" />
+    <ClInclude Include="TimeUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

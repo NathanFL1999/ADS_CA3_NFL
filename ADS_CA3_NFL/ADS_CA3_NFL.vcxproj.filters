@@ -21,7 +21,7 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\FileInputNode.cpp">
+    <ClCompile Include="FileInputNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,13 +29,13 @@
     <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\TimeUtility.h">
+    <ClInclude Include="FileInputNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\SalesRecords.h">
+    <ClInclude Include="SalesRecords.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ads_2021_ca3_nfl\ads_2021_ca3_nfl\FileInputNode.h">
+    <ClInclude Include="TimeUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
