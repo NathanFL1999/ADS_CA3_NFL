@@ -1,5 +1,3 @@
-#pragma once
-
 #include <fstream>
 #include "Node.h"
 #include "SalesRecords.h"
@@ -10,12 +8,16 @@ using namespace std;
 
 class FileInputNode : public Node<list<SalesRecords>>
 {
+
 	list<SalesRecords> salesRecords;
 
 
 public:
+
 	FileInputNode(string path);
-	list<salesRecords> getSalesRecords();
+	list<SalesRecords> getSalesRecords();
+
+	SalesRecords parseSalesRecords();
 
 };
 

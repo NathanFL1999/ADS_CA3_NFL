@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Support Files\ADS_CA3_Support.cpp" />
     <ClCompile Include="ADS_CA3_NFL.cpp" />
     <ClCompile Include="FileInputNode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -148,6 +149,13 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="SalesRecords.h" />
     <ClInclude Include="TimeUtility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100.txt" />
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000.txt" />
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_10000.txt" />
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100000.txt" />
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000000.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

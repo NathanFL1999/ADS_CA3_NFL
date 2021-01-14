@@ -24,6 +24,9 @@
     <ClCompile Include="FileInputNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Support Files\ADS_CA3_Support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h">
@@ -38,5 +41,22 @@
     <ClInclude Include="TimeUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_10000.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100000.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000000.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
