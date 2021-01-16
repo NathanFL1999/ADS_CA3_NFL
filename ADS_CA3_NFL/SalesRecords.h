@@ -6,7 +6,7 @@ using namespace std;
 
 struct SalesRecords
 {
-private:
+public:
 
 	string productName;
 	float price;
@@ -17,17 +17,17 @@ private:
 	int orderDateTime;
 	int deliveryDate;
 
-public: SalesRecords(string productName, float price, int quantity, string country, string region, string currency, int orderDateTime, int deliveryDate)
-{
-	this->productName = productName;
-	this->price = price;
-	this->quantity = quantity;
-	this->country = country;
-	this->region = region;
-	this->currency = currency;
-	this->orderDateTime = orderDateTime;
-	this->deliveryDate = deliveryDate;
-}
+	SalesRecords(string productName, float price, int quantity, string country, string region, string currency, int orderDateTime, int deliveryDate)
+	{
+		this->productName = productName;
+		this->price = price;
+		this->quantity = quantity;
+		this->country = country;
+		this->region = region;
+		this->currency = currency;
+		this->orderDateTime = orderDateTime;
+		this->deliveryDate = deliveryDate;
+	}	
 
 	  friend ostream& operator<<(ostream& os, const SalesRecords& salesRecords) {
 		  os << "Product Name: " << salesRecords.productName;
@@ -39,5 +39,5 @@ public: SalesRecords(string productName, float price, int quantity, string count
 		  os << ", orderDateTime: " << salesRecords.orderDateTime;
 		  os << ", deliveryDate: " << salesRecords.deliveryDate;
 		  return os;
-	  };
+	  }
 };
