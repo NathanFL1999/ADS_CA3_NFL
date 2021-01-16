@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+
     ifstream infile;
     infile.open("sales_100.txt");
 
