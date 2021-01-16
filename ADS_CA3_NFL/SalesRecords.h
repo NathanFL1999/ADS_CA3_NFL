@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class SalesRecords
+struct SalesRecords
 {
 private:
 
@@ -41,6 +41,3 @@ public: SalesRecords(string productName, float price, int quantity, string count
 		  return os;
 	  };
 };
-
-
-

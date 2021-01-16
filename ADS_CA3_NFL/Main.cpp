@@ -1,18 +1,27 @@
 #include <iostream>
 #include <fstream>
-#include "TimeUtility.h"
-#include "FileInputNode.h"
-#include "Node.h"
-#include "SalesRecords.h"
 
+using namespace std; 
 
 
 int main()
 {
-	std::cout << "Enter Product Name";
+	//std::cout << "Enter Product Name";
 
-	//FileInputNode = new ("C:\Users\Nate Dawg\source\repos\ADS_CA3_NFL\ADS_CA3_NFL");
+	//ifstream fileReader;
+	//fileReader.open("sales_100.txt");
+	//char output[100];
+	//if (fileReader.is_open()) {
+	//	while (!fileReader.eof()) {
 
 
+	//		fileReader >> output;
+	//		cout << output;
+
+
+
+	//	}
+	//}
+	//fileReader.close();
+	//return 0;
 }
-

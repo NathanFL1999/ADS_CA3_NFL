@@ -41,6 +41,12 @@
     <ClInclude Include="TimeUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SalesRecordsRemove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SalesRecordsModify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100.txt">

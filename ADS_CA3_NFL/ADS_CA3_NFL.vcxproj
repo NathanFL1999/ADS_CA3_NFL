@@ -148,6 +148,8 @@
     <ClInclude Include="FileInputNode.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="SalesRecords.h" />
+    <ClInclude Include="SalesRecordsRemove.h" />
+    <ClInclude Include="SalesRecordsModify.h" />
     <ClInclude Include="TimeUtility.h" />
   </ItemGroup>
   <ItemGroup>
