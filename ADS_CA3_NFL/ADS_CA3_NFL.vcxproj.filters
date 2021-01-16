@@ -16,6 +16,9 @@
     <Filter Include="Header Files\Utility">
       <UniqueIdentifier>{461bd520-3381-46af-afd6-5e090533a3b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Node">
+      <UniqueIdentifier>{f30c31cc-8320-4388-8be2-e7dd8a572b14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -29,12 +32,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FileInputNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SalesRecords.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,8 +44,17 @@
     <ClInclude Include="TimeUtility.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\Node</Filter>
+    </ClInclude>
     <ClInclude Include="NodeData.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiNode.h">
+      <Filter>Header Files\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="FileInputNode.h">
+      <Filter>Header Files\Node</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
