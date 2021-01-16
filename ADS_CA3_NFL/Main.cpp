@@ -3,25 +3,21 @@
 
 using namespace std; 
 
-
 int main()
 {
-	//std::cout << "Enter Product Name";
+    ifstream infile;
+    infile.open("sales_100.txt");
 
-	//ifstream fileReader;
-	//fileReader.open("sales_100.txt");
-	//char output[100];
-	//if (fileReader.is_open()) {
-	//	while (!fileReader.eof()) {
+    if (infile.fail())
+    {
+        cout << "File failed to open.\n";
+        exit(1);
+    }
 
+    while (infile.good())
+        cout << (char)infile.get();
 
-	//		fileReader >> output;
-	//		cout << output;
-
-
-
-	//	}
-	//}
-	//fileReader.close();
-	//return 0;
+    //Closes file
+    infile.close();
+    return 0;
 }

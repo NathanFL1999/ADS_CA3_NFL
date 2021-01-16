@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{461bd520-3381-46af-afd6-5e090533a3b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ADS_CA3_NFL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,14 +38,14 @@
     <ClInclude Include="SalesRecords.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TimeUtility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SalesRecordsRemove.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SalesRecordsModify.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeUtility.h">
+      <Filter>Header Files\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

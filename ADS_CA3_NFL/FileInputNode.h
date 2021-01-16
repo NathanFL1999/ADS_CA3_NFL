@@ -1,3 +1,5 @@
+#pragma once
+
 #include <fstream>
 #include "Node.h"
 #include "SalesRecords.h"

@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Support Files\ADS_CA3_Support.cpp" />
-    <ClCompile Include="ADS_CA3_NFL.cpp" />
     <ClCompile Include="FileInputNode.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
