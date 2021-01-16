@@ -17,9 +17,9 @@ class FileInputNode : public Node<list<SalesRecords>>
 public:
 
 	FileInputNode(string path);
-	list<SalesRecords> getSalesRecords();
+	list<SalesRecords> getSales();
 
-	SalesRecords parseSalesRecords();
+	SalesRecords parseSales(string s);
 
 };
 
