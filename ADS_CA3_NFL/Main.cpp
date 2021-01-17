@@ -1,3 +1,5 @@
+//https://en.cppreference.com/w/cpp/chrono
+//used to help me return functions speed in nanoseconds
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -6,11 +8,13 @@
 
 #include "NodeData.h"
 #include "SalesRecords.h"
-#include "FileInputNode.h"
+//#include "FileInputNode.h"
 #include "SalesRecordsModify.h"
 #include "SalesRecordsRemove.h"
+#include <chrono>
 
 using namespace std; 
+using namespace std::chrono;
 
 void reportByRegion();
 
@@ -39,15 +43,24 @@ int main()
     
     cout << endl << "************ Report By Region ************" << endl;
 
+    auto start = high_resolution_clock::now();
 
     reportByRegion();
+
+    auto stop = high_resolution_clock::now();
+
+    auto duration = duration_cast<nanoseconds>(stop - start);
+
+    cout << "Time taken by function: "
+        << duration.count() << " nanoseconds" << endl;
+    
 }
 
 void reportByRegion() {
 
     list<SalesRecords> salesList;
 
-    ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_1000.txt");
+    ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_100.txt");
     string salesRecords;
 
     while (filename.good()) {

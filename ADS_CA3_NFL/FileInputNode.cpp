@@ -23,3 +23,35 @@
 //{
 //	return list<SalesRecords>();
 //}
+
+////parses the sales records list
+////https://www.geeksforgeeks.org/converting-strings-numbers-cc/
+////found the above link helpful for converting the integers to strings
+//SalesRecords FileInputNode::parseSales(string s)
+//{
+//	string productName = s.substr(s.find_first_of(","));
+//	s = s.substr(s.find_first_of(","));
+//
+//	float price = stof(s.substr(s.find_first_of(",")));
+//	s = s.substr(s.find_first_of(","));
+//
+//	int quantity = stoi(s.substr(s.find_first_of(",")));
+//	s = s.substr(s.find_first_of(","));
+//
+//	string country = s.substr(s.find_first_of(","));
+//	s = s.substr(s.find_first_of(","));
+//
+//	string region = s.substr(s.find_first_of(","));
+//	s = s.substr(s.find_first_of(","));
+//
+//	string currency = s.substr(s.find_first_of(","));
+//	s = s.substr(s.find_first_of(","));
+//
+//	int orderDateTime = stoi(s.substr(s.find_first_of(",")));
+//	s = s.substr(s.find_first_of(","));
+//
+//	int deliveryDate = stoi(s.substr(s.find_first_of(",")));
+//	s = s.substr(s.find_first_of(","));
+//}
+//
+//
