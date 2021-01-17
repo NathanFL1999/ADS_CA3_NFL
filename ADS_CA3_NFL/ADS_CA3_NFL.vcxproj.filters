@@ -58,9 +58,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100.txt">
-      <Filter>Source Files</Filter>
-    </Text>
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000.txt">
       <Filter>Source Files</Filter>
     </Text>
@@ -71,6 +68,9 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000000.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="sales_100.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

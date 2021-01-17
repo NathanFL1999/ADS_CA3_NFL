@@ -30,4 +30,21 @@ public:
 	}
 
 	virtual void process(T& data) = 0;
+
+	////method should print each element of the list into a single line
+	//void printAllFromHead() {
+
+	//	Node<T> current = *this;
+
+	//	while (current.pPrevious != nullptr) {
+	//		current = *current.pPrevious;
+	//	}
+
+	//	std::cout << current.data << std::endl;
+	//	do {
+	//		current = *current.pNext;
+	//		std::cout << current.data << std::endl;
+	//	} while (current.pNext != nullptr);
+	//}
+
 };

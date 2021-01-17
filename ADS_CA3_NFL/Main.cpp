@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 #include <list>
 
 #include "NodeData.h"
@@ -11,63 +12,62 @@
 
 using namespace std; 
 
-void fileProcessing();
 void reportByRegion();
 
 
 int main()
 {
+    
+    //string filename;
+    //ofstream salesRecordFile;
 
-    ifstream salesRecordFile("sales_1000.txt");
+    //cout << "Enter text file name : ";
+    //cin >> filename;
 
-    if (salesRecordFile.fail())
-    {
-        cout << "File failed to open.\n";
-        exit(1);
-    }
+    //if (salesRecordFile.fail())
+    //{
+    //    cout << "File failed to open.\n";
+    //    exit(1);
+    //}
 
-    while (salesRecordFile.good())
-        cout << (char)salesRecordFile.get();
+    //salesRecordFile.open(filename.c_str());
+    //salesRecordFile >> filename;
+    //cout << filename << endl;
 
-    //Closes file
-    salesRecordFile.close();
-    return 0;
+    //salesRecordFile.close();
+    //return 0;
+    
+    cout << endl << "************ Report By Region ************" << endl;
 
-   // fileProcessing();
+
+    reportByRegion();
 }
 
 void reportByRegion() {
 
+    list<SalesRecords> salesList;
 
-}
+    ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_1000.txt");
+    string salesRecords;
 
-//taken from nialls code, just testing a few things out
-void fileProcessing() {
+    while (filename.good()) {
+        
+        getline(filename, salesRecords);
+        cout << salesRecords << endl;
+    }
 
-    //list<SalesRecords> salesList;
-    //salesList.push_back(SalesRecords("Pokemon Shield for Nintendo Switch", 25, 4, "Sweden", "EMEA", "SEK", 24 / 06 / 2020, 02 / 07 / 2020));
-    //salesList.push_back(SalesRecords("Train the Body", 62, 11, "Bolivia", "LATAM", "BOB", 04 / 10 / 2020 , 15 / 10 / 2020));
+    double PriceLimit = 50;
+    auto removeIfPriceFilter = [PriceLimit](SalesRecords salesRecord) { return salesRecord.price < PriceLimit; };
+    SalesRecordsRemove* pFilterPriceNode = new SalesRecordsRemove(removeIfPriceFilter);
+    NodeData<list<SalesRecords>>* pNodeData = new NodeData<list<SalesRecords>>();
 
-    ////ifstream infile;
-    ////infile.open("sales_100.txt");
+    pFilterPriceNode->setNext(pNodeData);
 
-    //double upperPriceLimit = 500;
-    //auto removeIfPriceFilter = [upperPriceLimit](SalesRecords salesRecord) { return salesRecord.price < upperPriceLimit; };
-    //SalesRecordsRemove* pFilterPriceNode = new SalesRecordsRemove(removeIfPriceFilter);
+    //prints the final results
+    pFilterPriceNode->process(salesList);
 
-    //double percentageReduction = 0.95;
-    //auto setPriceTransform = [percentageReduction](SalesRecords& salesRecord) {salesRecord.price = salesRecord.price * percentageReduction; };
-    //SalesRecordsModify* pTransformPriceNode = new SalesRecordsModify(setPriceTransform);
-
-    //NodeData<list<SalesRecords>>* pNodeData = new NodeData<list<SalesRecords>>();
-
-    //pFilterPriceNode->setNext(pTransformPriceNode)->setNext(pNodeData);
-
-    ////prints the final results
-    //pFilterPriceNode->process(salesList);
-
-    //for (SalesRecords salesRecords : pNodeData->getOutput()) {
-    //    cout << salesRecords << endl;
-    //}
+    for (SalesRecords salesRecords : pNodeData->getOutput()) {
+        cout << salesRecords << endl;
+    }
 
 }

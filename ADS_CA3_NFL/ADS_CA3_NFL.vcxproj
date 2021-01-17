@@ -154,11 +154,11 @@
     <ClInclude Include="TimeUtility.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100.txt" />
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000.txt" />
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_10000.txt" />
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_100000.txt" />
     <Text Include="..\..\..\..\Downloads\CA3 - Sales Records and Support Files\Data\sales_1000000.txt" />
+    <Text Include="sales_100.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
