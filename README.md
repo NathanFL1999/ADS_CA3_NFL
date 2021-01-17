@@ -15,7 +15,7 @@ Functionality
 -   Method in main to read in sales file and prints it to screen
 -   Main returns time in nanoseconds to run a specific function
 
-    
-
+ScreenCast link :
+-   https://www.youtube.com/watch?v=VDq4-jKtPr0&feature=youtu.be
 
 
