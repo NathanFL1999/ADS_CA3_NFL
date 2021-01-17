@@ -3,7 +3,7 @@
 
 //node used to take the data from the graph network
 template <class T>
-class NodeData : public Node<T> {
+class NodeDataOutput : public Node<T> {
 private:
 	T data;
 

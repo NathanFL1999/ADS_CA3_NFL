@@ -146,7 +146,7 @@
   <ItemGroup>
     <ClInclude Include="FileInputNode.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="NodeData.h" />
+    <ClInclude Include="NodeDataOutput.h" />
     <ClInclude Include="MultiNode.h" />
     <ClInclude Include="SalesRecords.h" />
     <ClInclude Include="SalesRecordsRemove.h" />

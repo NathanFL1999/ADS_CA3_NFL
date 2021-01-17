@@ -9,7 +9,7 @@ enum class NodeType {
 	Output
 };
 
-// parent class for a node
+// parent class for a node used to create new nodes
 template <class T>
 class Node {
 private:

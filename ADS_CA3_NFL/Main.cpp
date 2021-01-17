@@ -6,7 +6,7 @@
 #include <string>
 #include <list>
 
-#include "NodeData.h"
+#include "NodeDataOutput.h"
 #include "SalesRecords.h"
 //#include "FileInputNode.h"
 #include "SalesRecordsModify.h"
@@ -18,6 +18,7 @@ using namespace std::chrono;
 
 void reportByRegion();
 void reportByPopularity();
+void reportByPrice();
 
 
 int main()
@@ -42,12 +43,17 @@ int main()
     //salesRecordFile.close();
     //return 0;
     
+    ofstream myfile;
+    myfile.open("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\test.txt");
+
     cout << endl << "************ Report By Region ************\n" << endl;
 
+    //starts the clock before the function
     auto start = high_resolution_clock::now();
 
     reportByRegion();
 
+    //stops the clock when the function is finished
     auto stop = high_resolution_clock::now();
 
     auto duration = duration_cast<nanoseconds>(stop - start);
@@ -55,12 +61,16 @@ int main()
     cout << "Time taken by function: "
         << duration.count() << " nanoseconds" << endl;
     
+    myfile.close();
+    return 0;
 }
 
 void reportByRegion() {
 
+    //creates a new list 
     list<SalesRecords> salesList;
 
+    //reads in the file path
     ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_100.txt");
     string salesRecords;
     int salesVolume;
@@ -93,3 +103,37 @@ void reportByPopularity() {
 
 
 }
+
+void reportByPrice() {
+
+    //creating new list saleslist
+    list<SalesRecords> salesList;
+
+    //reads in the file path
+    ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_100.txt");
+    string salesRecords;
+
+    while (filename.good()) {
+
+        getline(filename, salesRecords);
+    }
+
+    //removes the sales records that price is less than 50 using the filter in my remove class
+    double PriceLimit = 50;
+    auto removeIfPriceFilter = [PriceLimit](SalesRecords saleRecord) { return saleRecord.price < PriceLimit; };
+    SalesRecordsRemove* pFilterPriceNode = new SalesRecordsRemove(removeIfPriceFilter);
+
+    NodeDataOutput<list<SalesRecords>>* pNodeDataOutput = new NodeDataOutput<list<SalesRecords>>();
+
+    //connects the price filter to the output node
+    pFilterPriceNode->setNext(pNodeDataOutput);
+
+    //passes the data through the graph network 
+    pFilterPriceNode->process(salesList);
+
+    //prints out the final results
+    for (SalesRecords salesRecords : pNodeDataOutput->getOutput()) {
+        cout << salesRecords << endl;
+    }
+}
+

@@ -47,13 +47,13 @@
     <ClInclude Include="Node.h">
       <Filter>Header Files\Node</Filter>
     </ClInclude>
-    <ClInclude Include="NodeData.h">
-      <Filter>Header Files\Node</Filter>
-    </ClInclude>
     <ClInclude Include="MultiNode.h">
       <Filter>Header Files\Node</Filter>
     </ClInclude>
     <ClInclude Include="FileInputNode.h">
+      <Filter>Header Files\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeDataOutput.h">
       <Filter>Header Files\Node</Filter>
     </ClInclude>
   </ItemGroup>
