@@ -43,9 +43,6 @@ int main()
     //salesRecordFile.close();
     //return 0;
     
-    ofstream myfile;
-    myfile.open("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\test.txt");
-
     cout << endl << "************ Report By Region ************\n" << endl;
 
     //starts the clock before the function
@@ -60,8 +57,7 @@ int main()
 
     cout << "Time taken by function: "
         << duration.count() << " nanoseconds" << endl;
-    
-    myfile.close();
+
     return 0;
 }
 
