@@ -13,6 +13,7 @@ public:
 		this->data = data;
 	}
 
+	//data can be used with getOutput()
 	T getOutput() {
 		return this->data;
 	}

@@ -6,8 +6,10 @@ using namespace std;
 FileInputNode::FileInputNode(string path)
 {
 	string s;
-	ifstream salesRecordFile(path);
+	ifstream salesRecordFile(path); //reads in the sales record
 
+	//takes a line from the sales record list and parses it
+	//when parsed pushes it to the back of the list
 	while (salesRecordFile.good())
 	{
 		getline(salesRecordFile, s);
@@ -16,11 +18,13 @@ FileInputNode::FileInputNode(string path)
 	}
 }
 
+//gets sales records list 
 list<SalesRecords> FileInputNode::getSales() 
 {
 	return list<SalesRecords>();
 }
 
+//parses the sales records list
 SalesRecords FileInputNode::parseSales(string s)
 {
 	string productName = s.substr(s.find_first_of(","));

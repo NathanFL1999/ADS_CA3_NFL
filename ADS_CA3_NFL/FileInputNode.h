@@ -10,7 +10,7 @@ using namespace std;
 
 class FileInputNode : public Node<list<SalesRecords>>
 {
-
+	//create salesRecords list 
 	list<SalesRecords> salesRecords;
 
 

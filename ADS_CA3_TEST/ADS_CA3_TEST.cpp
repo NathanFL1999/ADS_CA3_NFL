@@ -9,8 +9,9 @@ namespace ADSCA3TEST
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestParseSales)
 		{
+
 
 		}
 	};

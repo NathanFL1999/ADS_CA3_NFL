@@ -6,6 +6,7 @@ using namespace std;
 
 struct SalesRecords
 {
+//sales records Fields
 public:
 
 	string productName;
@@ -17,6 +18,7 @@ public:
 	int orderDateTime;
 	int deliveryDate;
 
+	//Constructor for sales records
 	SalesRecords(string productName, float price, int quantity, string country, string region, string currency, int orderDateTime, int deliveryDate)
 	{
 		this->productName = productName;
@@ -29,6 +31,7 @@ public:
 		this->deliveryDate = deliveryDate;
 	}	
 
+	//ostream to take in the sales records fields
 	  friend ostream& operator<<(ostream& os, const SalesRecords& salesRecords) {
 		  os << "Product Name: " << salesRecords.productName;
 		  os << "Price: " << salesRecords.price;

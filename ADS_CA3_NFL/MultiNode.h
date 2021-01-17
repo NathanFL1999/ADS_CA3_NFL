@@ -4,6 +4,7 @@
 #include "Node.h"
 
 //node class that can connect to multiple nodes
+//doesnt work as of yet
 template <class T>
 class MultiNode : public Node<T> {
 private:
