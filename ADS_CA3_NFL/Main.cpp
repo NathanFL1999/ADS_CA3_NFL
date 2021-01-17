@@ -17,6 +17,7 @@ using namespace std;
 using namespace std::chrono;
 
 void reportByRegion();
+void reportByPopularity();
 
 
 int main()
@@ -41,7 +42,7 @@ int main()
     //salesRecordFile.close();
     //return 0;
     
-    cout << endl << "************ Report By Region ************" << endl;
+    cout << endl << "************ Report By Region ************\n" << endl;
 
     auto start = high_resolution_clock::now();
 
@@ -62,25 +63,33 @@ void reportByRegion() {
 
     ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_100.txt");
     string salesRecords;
+    int salesVolume;
+
+    salesVolume = 0;
 
     while (filename.good()) {
         
         getline(filename, salesRecords);
         cout << salesRecords << endl;
+        salesVolume++;
+
     }
 
-    double PriceLimit = 50;
-    auto removeIfPriceFilter = [PriceLimit](SalesRecords salesRecord) { return salesRecord.price < PriceLimit; };
-    SalesRecordsRemove* pFilterPriceNode = new SalesRecordsRemove(removeIfPriceFilter);
-    NodeData<list<SalesRecords>>* pNodeData = new NodeData<list<SalesRecords>>();
+    cout << "Total Volume of sales : " << salesVolume << "\n" << endl;
+}
 
-    pFilterPriceNode->setNext(pNodeData);
+void reportByPopularity() {
 
-    //prints the final results
-    pFilterPriceNode->process(salesList);
+    list<SalesRecords> salesList;
 
-    for (SalesRecords salesRecords : pNodeData->getOutput()) {
+    ifstream filename("C:\\Users\\Nate Dawg\\source\\repos\\ADS_CA3_NFL\\ADS_CA3_NFL\\sales_100.txt");
+    string salesRecords;
+
+    while (filename.good()) {
+
+        getline(filename, salesRecords);
         cout << salesRecords << endl;
     }
+
 
 }

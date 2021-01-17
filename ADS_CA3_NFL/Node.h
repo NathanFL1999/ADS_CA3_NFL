@@ -40,10 +40,10 @@ public:
 	//		current = *current.pPrevious;
 	//	}
 
-	//	std::cout << current.data << std::endl;
+	//	cout << current.data << endl;
 	//	do {
 	//		current = *current.pNext;
-	//		std::cout << current.data << std::endl;
+	//		cout << current.data << endl;
 	//	} while (current.pNext != nullptr);
 	//}
 

@@ -22,4 +22,3 @@ public:
 	SalesRecords parseSales(string s);
 
 };
-

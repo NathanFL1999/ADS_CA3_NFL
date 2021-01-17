@@ -11,11 +11,11 @@ using namespace std;
 //Modifies the sales records in the list 
 class SalesRecordsModify: public Node<list<SalesRecords>> {
 private:
-	std::function<void(SalesRecords&)> transform;
+	function<void(SalesRecords&)> transform;
 
 public:
 
-	SalesRecordsModify(std::function<void(SalesRecords&)> transform) {
+	SalesRecordsModify(function<void(SalesRecords&)> transform) {
 		this->transform = transform;
 	}
 

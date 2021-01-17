@@ -7,20 +7,20 @@
 
 using namespace std;
 
-/// @brief Removes those Bike objects from the list that satisfy the filter
+//Removes the sales records from the list depending on the filter
 class SalesRecordsRemove : public Node<list<SalesRecords>> {
 private:
-	std::function<bool(SalesRecords&)> filter;
+	function<bool(SalesRecords&)> filter;
 
 public:
 
-	SalesRecordsRemove(std::function<bool(SalesRecords&)> filter) {
+	SalesRecordsRemove(function<bool(SalesRecords&)> filter) {
 		this->filter = filter;
 	}
 
 	//removes sales record from the list 
 	void process(list<SalesRecords>& list) {
-		list.erase(std::remove_if(list.begin(), list.end(), filter), list.end());
+		list.erase(remove_if(list.begin(), list.end(), filter), list.end());
 		this->getNext()->process(list);
 	}
 };
